@@ -1,19 +1,11 @@
-# LANE 2.0
+# LANE 2.1 — Athlete × Student OS
 
-Mobile-first persoonlijke Athlete × Student OS.
+Nieuwe functie: **Importeren**. Kies een PDF, DOCX of TXT met je weektrainingen, selecteer de maandag, controleer de automatisch herkende tijden en voeg ze toe aan je planning.
 
-## Openen
-Open index.html in een browser voor een lokale preview. Voor installeren op iPhone/Android en offline beschikbaarheid: publiceer de volledige map op een HTTPS-host (bijvoorbeeld GitHub Pages of Netlify).
-
-## Installeren
-- iPhone (Safari): Deel → Zet op beginscherm.
-- Android (Chrome): menu → App installeren / Toevoegen aan startscherm.
-
-## Data
-Alle gegevens staan uitsluitend in localStorage op het apparaat en domein. Geen automatische synchronisatie tussen telefoon en laptop. Gebruik Instellingen → Exporteer JSON / Importeer JSON.
-
-## Migratie
-De localStorage-sleutel `lane_os_v1` is behouden. Als je v1 en v2 op dezelfde oorsprong bezoekt, worden je bestaande gegevens hergebruikt. Via een ander domein of lokaal bestand: gebruik JSON-export/import.
-
-## Disclaimer
-VO2max/VLamax als eerder opgegeven testwaarden zonder geverifieerde eenheden of protocol. Historische wedstrijdgegevens controleren voor gebruik.
+## Belangrijk
+- Een PDF moet selecteerbare tekst bevatten; gescande documenten worden niet herkend.
+- PDF en DOCX verwerking haalt een JavaScript-bibliotheek op via cdnjs; een internetverbinding is nodig wanneer die nog niet geladen is.
+- Herkenning is op basis van datums/dagnamen en tijden, niet gegarandeerd. Controleer de preview.
+- Geplande trainingen zijn niet automatisch uitgevoerde zwemtrainingen.
+- Je bestaande gegevens blijven op hetzelfde apparaat/browser bewaard dankzij dezelfde lokale opslagsleutel. Maak voor de update een JSON-back-up via Instellingen.
+- Upload de bestanden van deze map naar de root van je GitHub repository en commit de wijzigingen; GitHub Pages publiceert de update.
