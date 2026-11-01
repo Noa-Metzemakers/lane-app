@@ -1,6 +1,6 @@
-/* LANE 2.4 — network-first documents, offline fallback; safe update flow */
-const CACHE = 'lane-shell-v2.4.0';
-const APP_SHELL = ['./', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png', './icons/favicon-32.png', './branding/lane-banner.png'];
+/* LANE 2.5 — network-first documents, offline fallback; safe update flow */
+const CACHE = 'lane-shell-v2.5.0';
+const APP_SHELL = ['./', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png', './icons/favicon-32.png', './branding/lane-banner.png', './branding/lane-icon-transparent.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(APP_SHELL)));
   // Do not skipWaiting here; the app will notify the user before replacing the UI.
