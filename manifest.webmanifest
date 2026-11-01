@@ -1,12 +1,12 @@
 {
-  "name": "LANE 2.0 — Athlete × Student OS",
+  "name": "LANE 2.2 — Athlete × Student OS",
   "short_name": "LANE",
   "description": "Zwemmen, studie en herstel in één app",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#080d19",
-  "theme_color": "#080d19",
+  "background_color": "#0F1A2E",
+  "theme_color": "#0F1A2E",
   "lang": "nl-BE",
   "icons": [
     {

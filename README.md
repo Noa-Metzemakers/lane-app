@@ -1,11 +1,16 @@
-# LANE 2.1 — Athlete × Student OS
+# LANE 2.2 — Athlete × Student OS
 
-Nieuwe functie: **Importeren**. Kies een PDF, DOCX of TXT met je weektrainingen, selecteer de maandag, controleer de automatisch herkende tijden en voeg ze toe aan je planning.
+## Nieuw
 
-## Belangrijk
-- Een PDF moet selecteerbare tekst bevatten; gescande documenten worden niet herkend.
-- PDF en DOCX verwerking haalt een JavaScript-bibliotheek op via cdnjs; een internetverbinding is nodig wanneer die nog niet geladen is.
-- Herkenning is op basis van datums/dagnamen en tijden, niet gegarandeerd. Controleer de preview.
-- Geplande trainingen zijn niet automatisch uitgevoerde zwemtrainingen.
-- Je bestaande gegevens blijven op hetzelfde apparaat/browser bewaard dankzij dezelfde lokale opslagsleutel. Maak voor de update een JSON-back-up via Instellingen.
-- Upload de bestanden van deze map naar de root van je GitHub repository en commit de wijzigingen; GitHub Pages publiceert de update.
+- Automatisch tijdsgebonden thema op basis van **de lokale tijd van je toestel**: 00:00–07:59 ochtend, 08:00–16:59 middag, 17:00–23:59 avond.
+- Direct zichtbare knop **Upload PDF / trainingsweek** in **Zwemmen**. De knop opent de importpagina en het bestandskeuzevenster.
+- PDF, DOCX of TXT wordt lokaal gelezen met browserbibliotheken (PDF/DOCX vraagt de eerste keer internet). Controleer de herkenning vóór het toevoegen.
+- Geïmporteerde sessies komen in de weekplanning, niet in het logboek met voltooide trainingen.
+
+## Publiceren
+
+Upload de inhoud van deze map naar de root van je GitHub Pages repository `lane-app` en vervang bestaande bestanden, inclusief `sw.js`. Commit. Herlaad de app; bij een oudere offline cache kan sluiten en opnieuw openen helpen.
+
+## Privacy
+
+Gegevens staan in browseropslag per toestel en synchroniseren nog niet automatisch. Maak een JSON-export vanuit Instellingen. Je documenten worden in de browser verwerkt, zonder eigen LANE-server. Externe JavaScript-bibliotheken voor documentextractie worden via een CDN geladen.
