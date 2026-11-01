@@ -1,16 +1,16 @@
-# LANE 2.2 — Athlete × Student OS
+# LANE 2.3 — Updates op gsm
 
-## Nieuw
+## Installatie op GitHub Pages
+Upload **de inhoud** van deze map (index.html, sw.js, manifest.webmanifest, icons/) in de hoofdmap van je repository. Commit alle wijzigingen. Controleer of de laatste Pages-deployment is geslaagd.
 
-- Automatisch tijdsgebonden thema op basis van **de lokale tijd van je toestel**: 00:00–07:59 ochtend, 08:00–16:59 middag, 17:00–23:59 avond.
-- Direct zichtbare knop **Upload PDF / trainingsweek** in **Zwemmen**. De knop opent de importpagina en het bestandskeuzevenster.
-- PDF, DOCX of TXT wordt lokaal gelezen met browserbibliotheken (PDF/DOCX vraagt de eerste keer internet). Controleer de herkenning vóór het toevoegen.
-- Geïmporteerde sessies komen in de weekplanning, niet in het logboek met voltooide trainingen.
+## Updatemechanisme
+- Nieuwe service worker versie `lane-shell-v2.3.0`.
+- Bij app openen, terugkeren naar voorgrond, online komen en elke vijf minuten actief: controleren op updates.
+- Als een nieuwe service worker is geïnstalleerd, verschijnt een balk **Nieuwe versie beschikbaar → Nu bijwerken**. De gebruiker bepaalt wanneer er herladen wordt.
+- Navigaties halen bij internet de nieuwste HTML op; offline wordt de opgeslagen HTML gebruikt.
+- Taken, geplande trainingen en herstelgegevens blijven in `localStorage`. Maak vooraf via de app een JSON-back-up.
 
-## Publiceren
+## Belangrijke beperkingen
+Updates zijn niet instant wanneer de app volledig gesloten is. GitHub Pages heeft geen pushmechanisme. Een reeds geïnstalleerde home-screen app moet eerst geopend of naar de voorgrond gebracht worden. Bij een eerste upgrade vanaf oudere versies kan de oude cache nog één keer interveniëren; open zo nodig de pagina in de normale browser, ververs en start daarna de homescreen-app. Het nieuwe mechanisme maakt volgende upgrades betrouwbaarder.
 
-Upload de inhoud van deze map naar de root van je GitHub Pages repository `lane-app` en vervang bestaande bestanden, inclusief `sw.js`. Commit. Herlaad de app; bij een oudere offline cache kan sluiten en opnieuw openen helpen.
-
-## Privacy
-
-Gegevens staan in browseropslag per toestel en synchroniseren nog niet automatisch. Maak een JSON-export vanuit Instellingen. Je documenten worden in de browser verwerkt, zonder eigen LANE-server. Externe JavaScript-bibliotheken voor documentextractie worden via een CDN geladen.
+Voor elke volgende versie: wijzig **CACHE** in `sw.js`, en de weergegeven versie in `index.html`. De update verschijnt pas nadat je de nieuwe bestanden naar GitHub Pages geüpload hebt.
