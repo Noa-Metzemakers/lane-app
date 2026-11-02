@@ -1,1 +1,1 @@
-LANE 2.6.4: vervang index.html EN sw.js in de hoofdmap van je GitHub Pages repository. Laat config.js ongemoeid. Maak vooraf een JSON backup. Controleer na deploy de broncode titel en serviceworker versie.
+LANE 2.6.6 - Safari stale-cache fix. Upload index.html en sw.js naar de root van GitHub repo. Laat config.js ongewijzigd. Maak JSON back-ups op beide apparaten voordat je iets verwijdert. De fout in 2.6.5 was cache.put met 3 argumenten (moeten er 2 zijn). 2.6.6 gebruikt network-first voor HTML en config.js en behoudt cloudlogica van 2.6.5. Niet live getest.
