@@ -1,5 +1,5 @@
-/* LANE 2.7.0 — fix Safari stale HTML: valid cache.put signature, network-first HTML and config */
-const CACHE = 'lane-shell-v2.7.0';
+/* LANE 2.9.0 — fix Safari stale HTML: valid cache.put signature, network-first HTML and config */
+const CACHE = 'lane-shell-v2.9.0';
 const APP_SHELL = ['./', './index.html', './config.js', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png', './icons/favicon-32.png', './branding/lane-banner.png', './branding/lane-icon-transparent.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(APP_SHELL)));
